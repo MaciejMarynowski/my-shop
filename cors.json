@@ -1,0 +1,7 @@
+[
+  {
+    "origin": ["http://localhost:5173", "https://my-shop-bbd7a.web.app", "https://my-shop-bbd7a.firebaseapp.com", "https://my-shop.vercel.app"],
+    "method": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    "maxAgeSeconds": 3600
+  }
+]
