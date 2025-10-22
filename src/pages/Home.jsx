@@ -64,17 +64,18 @@ export default function Home() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-sm:gap-4">
             {filteredProducts.map((p) => (
-              <Link key={p.id} 
-              to={`/product/${p.id}`} 
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition flex flex-colmax-sm:flex-row max-sm:items-center max-sm:p-2"
+              <Link
+                key={p.id}
+                to={`/product/${p.id}`}
+                className="bg-white rounded-lg shadow-md hover:shadow-xl transition flex flex-col max-sm:flex-row max-sm:items-center max-sm:p-2 overflow-hidden"
               >
                 <img
                   src={p.imageURL}
                   alt={p.name}
-                  className="h-48 w-full object-contain rounded-t-lg p-4max-sm:h-24 max-sm:w-24 max-sm:rounded-lg max-sm:p-2"
+                  className="h-48 w-full object-cover rounded-t-lg max-sm:h-24 max-sm:w-24 max-sm:rounded-lg max-sm:object-cover"
                 />
                 <div className="p-4 flex-1 flex flex-col justify-between max-sm:p-2 max-sm:ml-3">
-                  <h3 className="text-lg font-semibold text-gray-900 max-sm:text-base">
+                  <h3 className="text-lg font-semibold text-gray-900 max-sm:text-base truncate">
                     {p.name}
                   </h3>
                   <p className="mt-2 text-cyan-600 font-bold max-sm:mt-1 max-sm:text-sm">
